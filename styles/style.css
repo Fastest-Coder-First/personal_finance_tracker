@@ -1,0 +1,68 @@
+/* Primary color theme */
+:root {
+    --primary-color: #2C5F2D;
+    --secondary-color: #97BC62;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+  }
+  
+  form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  select {
+    flex: 1;
+    padding: 8px;
+    font-size: 16px;
+  }
+  
+  button {
+    padding: 8px 12px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .transaction-list {
+    margin-bottom: 20px;
+  }
+  
+  .transaction-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--secondary-color);
+    margin-bottom: 10px;
+    color: white;
+    font-weight: bold;
+    border-radius: 4px;
+  }
+  
+  .balance {
+    text-align: center;
+  }
+  
+  .balance h2 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+  
