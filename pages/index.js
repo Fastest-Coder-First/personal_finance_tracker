@@ -1,35 +1,58 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
+import { Container } from '@mui/material';
+//import appbar, toolbar, and typography from mui
+import { AppBar, Toolbar } from '@mui/material';
+import { Typography } from '@mui/material';
+//import createTheme from mui
+import { createTheme } from '@mui/material/styles';
+//import themeprovider from mui
+import { ThemeProvider } from '@mui/material/styles';
+//import transactionform from components
 import TransactionForm from '../components/TransactionForm';
+//import transactionlist from components
 import TransactionList from '../components/TransactionList';
-import { Container, Typography } from '@mui/material';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-
-const theme = createTheme({
+//import mui grid
+import Grid from '@mui/material/Grid';
+//create a theme named myTheme with primary and secondary colors
+const myTheme = createTheme({
   palette: {
     primary: {
-      main: '#2C5F2D',
+      main: '#0095cd',
     },
     secondary: {
-      main: '#97BC62',
+      main: '#424242',
     },
   },
 });
 
+//create a function for home
 export default function Home() {
+  //create a state for transactions
   const [transactions, setTransactions] = useState([]);
+  //create a state for edit
+  const [edit, setEdit] = useState(false);
 
+  //create a function for addTransaction
   const addTransaction = (transaction) => {
     setTransactions([...transactions, transaction]);
   };
-
+  //create a function for editTransaction
   const editTransaction = (index, updatedTransaction) => {
+    console.log(updatedTransaction);
     const newTransactions = [...transactions];
     newTransactions[index] = updatedTransaction;
     setTransactions(newTransactions);
-  };
-  
+    //set edit to false
+    setEdit(true);
 
+  };
+  //create a function for editTransaction1
+  const editTransaction1 = () => {
+    setEdit(false);
+  };
+
+  //create a function for deleteTransaction
   const deleteTransaction = (index) => {
     const newTransactions = [...transactions];
     newTransactions.splice(index, 1);
@@ -46,31 +69,54 @@ export default function Home() {
   );
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={myTheme}>
       <div>
         <Head>
           <title>Personal Finance Tracker</title>
         </Head>
+        {/* //create an appbar with title Personal Finance Tracker */}
+        <AppBar position="static">
+          <Toolbar>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+              Personal Finance Tracker
+            </Typography>
+            <div className="balance" style={{ display: "flex", flexDirection: "row" }}>
+              <Typography variant="h6" align="center" color="secondary" gutterBottom>
+                Current Balance:
+              </Typography>
+              <Typography variant="h5" align="center" color="white" style={{ marginLeft: "10px" }} gutterBottom>
+                ${balance}
+              </Typography>
+            </div>
+          </Toolbar>
+        </AppBar>
+        {/* //create a container with maxWidth of sm and a margin of 30px from typography */}
+        <Grid container justifyContent="center" style={{ marginTop: "30px", height: "77vh" }}>
+          <Grid item xs={12} sm={6} md={3}>
+            <TransactionForm addTransaction={addTransaction} />
+          </Grid>
+          <Grid item xs={12} sm={6} md={9}>
+            <TransactionList
+              transactions={transactions}
+              editTransaction={editTransaction} edit={edit} editTransaction1={editTransaction1}
+              deleteTransaction={deleteTransaction}
+            />
+          </Grid>
+          <Grid item xs={12}>
 
-        <Container maxWidth="sm">
-          <Typography variant="h4" align="center" color="primary" gutterBottom>
-            Personal Finance Tracker
-          </Typography>
-          <TransactionForm addTransaction={addTransaction} />
-          <TransactionList
-            transactions={transactions}
-            editTransaction={editTransaction}
-            deleteTransaction={deleteTransaction}
-          />
-          <div className="balance">
-            <Typography variant="h6" align="center" color="primary" gutterBottom>
-              Current Balance:
-            </Typography>
-            <Typography variant="h5" align="center" color="secondary" gutterBottom>
-              ${balance}
-            </Typography>
-          </div>
-        </Container>
+
+          </Grid>
+        </Grid>
+        <footer className="footer" style={{ backgroundColor: "#0095cd" }}>
+          <Container maxWidth="lg">
+            <Grid container justifyContent="right" style={{ alignSelf: "flex-end" }}>
+              <Typography variant="body2" color="secondary" style={{ display: "grid", alignContent: "flex-end", marginBottom: "10px", marginRight: "20px" }}>
+                Personal Finance Tracker developed by Sowndharya R for
+              </Typography>
+              <img src="https://www.fastestcoderfirst.com/assets/img/Fastest-Coder-Hackathon-Logo.png" alt="Fastest Hacker" style={{ height: "70px" }} />
+            </Grid>
+          </Container>
+        </footer>
       </div>
     </ThemeProvider>
   );
