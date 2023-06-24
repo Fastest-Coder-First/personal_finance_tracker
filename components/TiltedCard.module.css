@@ -1,0 +1,17 @@
+.card {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    transform: rotate(-3deg);
+  }
+  
+  .title {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .content {
+    margin-top: 0.5rem;
+  }
+  
