@@ -17,7 +17,7 @@ import TransactionList from '../components/TransactionList';
 //import mui grid
 import Grid from '@mui/material/Grid';
 //import quotes from components
-import Quotes from '../components/q uotes';
+import Quotes from '../components/quotes';
 //create a theme named myTheme with primary and secondary colors
 const myTheme = createTheme({
   palette: {
