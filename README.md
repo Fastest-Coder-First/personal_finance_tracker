@@ -1,2 +1,1 @@
-# personal_finance_tracker
-Finance tracker application for Fastest Coder First hackathon
+This is a starter template for [Learn Next.js](https://nextjs.org/learn)."# sowndharya-ft-fcfh" 
