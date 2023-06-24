@@ -72,14 +72,18 @@ export default function Home() {
     <ThemeProvider theme={myTheme}>
       <div>
         <Head>
-          <title>Personal Finance Tracker</title>
+          <title>Oversight</title>
         </Head>
         {/* //create an appbar with title Personal Finance Tracker */}
         <AppBar position="static">
           <Toolbar>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              Personal Finance Tracker
+            {/* //insert image from public folder */}
+            <img src="/pngegg.png" alt="logo" style={{ width: "40px", marginLeft: "-20px" }} />
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 ,marginLeft:"-2px"}}>
+            versight
             </Typography>
+      
+
             <div className="balance" style={{ display: "flex", flexDirection: "row" }}>
               <Typography variant="h6" align="center" color="secondary" gutterBottom>
                 Current Balance:
@@ -90,8 +94,14 @@ export default function Home() {
             </div>
           </Toolbar>
         </AppBar>
+        <Typography variant='h6'align='center' style={{marginTop:"5px",color:"#0095cd"}}>
+          <i style={{marginRight:"10px"}}>
+          "Think ahead, don’t let day to day operations drive out planning"
+           </i>
+           ~Donald Rumsfeld
+           </Typography>
         {/* //create a container with maxWidth of sm and a margin of 30px from typography */}
-        <Grid container justifyContent="center" style={{ marginTop: "30px", height: "77vh" }}>
+        <Grid container justifyContent="center" style={{ marginTop: "30px", height: "70vh" }}>
           <Grid item xs={12} sm={6} md={3}>
             <TransactionForm addTransaction={addTransaction} />
           </Grid>
@@ -107,7 +117,7 @@ export default function Home() {
 
           </Grid>
         </Grid>
-        <footer className="footer" style={{ backgroundColor: "#0095cd" }}>
+        <footer className="footer" style={{ backgroundColor: "#0095cd",marginTop:"5px" }}>
           <Container maxWidth="lg">
             <Grid container justifyContent="right" style={{ alignSelf: "flex-end" }}>
               <Typography variant="body2" color="secondary" style={{ display: "grid", alignContent: "flex-end", marginBottom: "10px", marginRight: "20px" }}>
