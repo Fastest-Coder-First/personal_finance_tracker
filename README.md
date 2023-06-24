@@ -52,3 +52,9 @@ Delete Transactions: To delete a transaction, click the "Delete" button next to 
 
 View Balance: The current balance is displayed on the homepage, providing an overview of your income and expenses.
 ```
+
+##Screen shots
+<img src="https://raw.githubusercontent.com/Sowndharya-ra/personal_finance_tracker/main/Flowchart.png">
+<img src="https://raw.githubusercontent.com/Sowndharya-ra/personal_finance_tracker/main/home.jpg">
+<img src="https://raw.githubusercontent.com/Sowndharya-ra/personal_finance_tracker/main/addtransaction.jpg">
+<img src="https://raw.githubusercontent.com/Sowndharya-ra/personal_finance_tracker/main/edittransaction.jpg">
