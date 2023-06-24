@@ -1,21 +1,22 @@
-#Finance Tracker
+# Finance Tracker
+
 ```
 Finance Tracker is a web-based personal finance tracking application that allows users to manage their income and expenses in a convenient and organized way. With Finance Tracker, users can easily add, edit, and delete transactions, as well as view their current balance.
 ```
  
-##Purpose
+## Purpose
 ```
 This application was developed as part of Fastest coders first hackathon powered by github copilot in order to demonstrate how github copilot can help developers reduce their coding time and increae productivity .
 ```
  
-##Features
+## Features
 ```
 Transaction Management: Users can add new income or expense transactions by providing a description and the transaction amount. They can also edit existing transactions to update the description or amount. Transactions can be deleted if no longer needed.
 
 Balance Calculation: Finance Tracker automatically calculates and displays the current balance based on the user's income and expense transactions. This provides users with an up-to-date overview of their financial standing.
 ```
  
-##Technologies Used:
+## Technologies Used:
 ``` 
 Frontend: The frontend of the Finance Tracker application is built using Next.js, a popular React framework. It leverages HTML, CSS, and Material-UI for the user interface and styling.
 
@@ -24,7 +25,7 @@ Backend: As of now, the application has no backend hence data is not retained
 User Authentication: No user authentication added
 
 ```
-##Getting Started
+## Getting Started
 ```
 To run the Finance Tracker application locally, follow these steps:
 
@@ -42,7 +43,7 @@ Open the application in your browser:
 http://localhost:3000
 ```
 
-##Usage
+## Usage
 ```
 Add Transactions: On the homepage, click the "Add Transaction" button to add a new income or expense transaction. Enter the description and amount, and click "Save" to add it to your transaction list.
 
@@ -53,7 +54,7 @@ Delete Transactions: To delete a transaction, click the "Delete" button next to 
 View Balance: The current balance is displayed on the homepage, providing an overview of your income and expenses.
 ```
 
-##Screen shots
+## Screen shots
 <img src="https://raw.githubusercontent.com/Sowndharya-ra/personal_finance_tracker/main/Flowchart.png">
 <img src="https://raw.githubusercontent.com/Sowndharya-ra/personal_finance_tracker/main/home.jpg">
 <img src="https://raw.githubusercontent.com/Sowndharya-ra/personal_finance_tracker/main/addtransaction.jpg">
